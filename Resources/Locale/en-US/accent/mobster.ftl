@@ -1,7 +1,4 @@
-﻿﻿accent-mobster-prefix-boss-1 = Nyehh,
-
-﻿accent-mobster-prefix-minion-1 = Nyehh,
-
+﻿
 accent-mobster-suffix-boss-1 = , see?
 accent-mobster-suffix-boss-2 = , fugeddaboutit.
 accent-mobster-suffix-boss-3 = , capiche?
