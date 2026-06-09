@@ -9,3 +9,8 @@
   strategy: !type:ClampedHsvColoration
     saturation: [0, 0.8]
     value: [.2, 1]
+
+- type: skinColoration
+  id: SlimeRainbow
+  strategy: !type:ClampedHsvColoration
+    value: [0, 1]
