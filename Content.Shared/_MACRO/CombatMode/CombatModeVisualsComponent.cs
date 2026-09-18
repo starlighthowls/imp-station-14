@@ -12,8 +12,8 @@ public sealed partial class CombatModeVisualsComponent : Component
     /// <summary>
     /// Sprite to set for the combat layer
     /// </summary>
-    [DataField(required: true), ViewVariables(VVAccess.ReadOnly)]
-    public SpriteSpecifier Sprite;
+    [DataField("sprites", required: true), ViewVariables(VVAccess.ReadOnly)]
+    public List<SpriteSpecifier> Sprite; // imp edit
 
     /// <summary>
     /// Hides the base layer when combat mode is activated if it exists

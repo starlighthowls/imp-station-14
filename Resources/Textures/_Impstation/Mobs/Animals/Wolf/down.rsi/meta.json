@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "size": {
+    "x": 60,
+    "y": 41
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By StarlightHowls",
+  "states": [
+    {
+      "name": "wolf",
+      "directions": 4
+    },
+    {
+      "name": "glow",
+      "directions": 4
+    }
+  ]
+}

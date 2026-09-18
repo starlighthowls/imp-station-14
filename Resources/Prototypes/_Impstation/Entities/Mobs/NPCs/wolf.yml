@@ -1,0 +1,72 @@
+- type: entity
+  name: space wolf
+  id: MobWolfSpace
+  parent: MobBearSpace
+  description: OH FUCK AAAAAAAA # think of something to put here
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Impstation/Mobs/Animals/Wolf/down.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: wolf
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: glow
+      shader: unshaded
+  - type: CombatModeVisuals # i broke the c# trying to make this work oops
+    hideBaseLayer: true
+    sprites:
+    - sprite: _Impstation/Mobs/Animals/Wolf/up.rsi
+      state: wolf
+    - sprite: _Impstation/Mobs/Animals/Wolf/up.rsi
+      state: glow
+      shader: unshaded
+  - type: CombatModeSprint # slower in attack mode
+    doImpactDamage: false
+    sprintCoefficient: 0.5
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+    baseWalkSpeed: 3
+  - type: ThermalVision
+    lightRadius: 7
+    color: "#4795ff"
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 1
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: wolf
+        BaseUnshaded: glow
+      Critical:
+        Base: wolf # to do, replace these w a dead/ crit sprite
+        BaseUnshaded: glow
+      Dead:
+        Base: wolf
+        BaseUnshaded: glow
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 8
+        Slash: 12
+#  - type: MaulAction
+#    percentageConsumed: 100
+#    popupSelfStart: maul-start-self
+#    popupSelfEnd: maul-end-self
+#    popupOthersStart: maul-start-others
+#    popupOthersEnd: maul-end-self
+#    consumeActionId: ActionKodepiiaConsume
+#    damage:
+#      Slash: 200
+#    whitelist:
+#      components:
+#      - # can i put like context: "human" here or something sobs
+
+
